@@ -178,6 +178,7 @@ def push_pushplus(token, content=""):
         }
  
         response = requests.get(server_url, params=params)
+        response.content.decode("utf-8")
         json_data = response.json()
  
         if json_data['code'] == 200:
