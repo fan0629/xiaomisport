@@ -171,14 +171,14 @@ def push_pushplus(token, content=""):
         print("[注意] 未提供token，不进行pushplus推送！")
     else:
         server_url = f"http://www.pushplus.hxtrip.com/send"
-        params = {
+        pushInfo = {
             "token": token,
             "title": '小米运动 步数修改',
             "content": content
         }
  
-        response = requests.get(server_url, params=params)
-        response.content.decode("utf-8")
+        response = requests.get(server_url, params=pushInfo)
+        print(response)
         json_data = response.json()
  
         if json_data['code'] == 200:
