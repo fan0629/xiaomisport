@@ -170,7 +170,7 @@ def push_pushplus(token, content=""):
     if token == '':
         print("[注意] 未提供token，不进行pushplus推送！")
     else:
-        server_url = f"http://pushplus.hxtrip.com/send"
+        server_url = f"http://www.pushplus.plus/send"
         pushInfo = {
             "token": token,
             "title": '小米运动 步数修改',
