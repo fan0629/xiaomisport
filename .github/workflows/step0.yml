@@ -1,4 +1,4 @@
-name: 刷步数
+name: 刷步数0
 
 on:
   #push:
@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: 01 00 * * *
+    - cron: 01 21 * * *
   watch:
     types: started
 
@@ -28,7 +28,7 @@ jobs:
         pkey='${{ secrets.PKEY }}'
         user='${{ secrets.USER }}'
         pwd='${{ secrets.PWD }}'
-        step='${{ secrets.STEP }}'
+        step='${{ secrets.STEP0 }}'
         
         python3 main.py <<EOF
         ${pmode}
