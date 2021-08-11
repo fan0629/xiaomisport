@@ -1,4 +1,4 @@
-name: 刷步数0
+name: 刷步数
 
 on:
   #push:
@@ -28,7 +28,7 @@ jobs:
         pkey='${{ secrets.PKEY }}'
         user='${{ secrets.USER }}'
         pwd='${{ secrets.PWD }}'
-        step='${{ secrets.STEP0 }}'
+        step='${{ secrets.STEP }}'
         
         python3 main.py <<EOF
         ${pmode}
