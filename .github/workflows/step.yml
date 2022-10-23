@@ -37,4 +37,10 @@ jobs:
         ${user}
         ${pwd}
         ${step}
+        EOF || python3 main.py <<EOF
+        ${pmode}
+        ${pkey}
+        ${user}
+        ${pwd}
+        ${step}
         EOF
