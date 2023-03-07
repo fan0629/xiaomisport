@@ -31,16 +31,4 @@ jobs:
         pwd='${{ secrets.PWD }}'
         step='${{ secrets.STEP }}'
         
-        python3 main.py <<EOF
-        ${pmode}
-        ${pkey}
-        ${user}
-        ${pwd}
-        ${step}
-        EOF || python3 main.py <<EOF
-        ${pmode}
-        ${pkey}
-        ${user}
-        ${pwd}
-        ${step}
-        EOF
+        python3 main.py ${pmode} ${pkey} ${user} ${pwd} ${step} || python3 main.py ${pmode} ${pkey} ${user} ${pwd} ${step}
